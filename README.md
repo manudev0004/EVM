@@ -25,8 +25,14 @@ The Electronic Voting Machine (EVM) developed in this project offers the followi
 ![EVM Image 1](evm_image1.jpg)
 *Image caption: Illustration of the Electronic Voting Machine (EVM) interface.*
 
-![EVM Image 2](evm_image2.jpg)
+![EVM Image 1](evm_image2.jpg)
+*Image caption: Illustration of the Electronic Voting Machine (EVM) interface.*
+
+![EVM Image 2](evm_image3.jpg)
 *Image caption: Biometric and facial recognition authentication process.*
+
+![EVM Image 2](evm_image4.jpg)
+*Image caption: Side View of the machine.*
 
 ## Getting Started 🚀
 

@@ -1,62 +1,67 @@
-# 🗳️ Electronic Voting Machine (EVM) 🖥️
+# Raspberry Pi Voting Prototype
 
-This project implements an Electronic Voting Machine (EVM) using Raspberry Pi 🍓, integrating biometric and facial recognition technology to authenticate voters before allowing them to cast their votes securely and conveniently. By combining these advanced authentication methods with the affordability and accessibility of Raspberry Pi, the project aims to enhance the integrity, efficiency, and inclusivity of the electoral process.
+A physical voting-machine prototype combining fingerprint verification, a camera-based identity check, button inputs and a local results display.
 
-## Overview 🌟
+[Project report](EVM%20Report.pdf) · [Technical notes](docs/technical-notes.md) · [Reproduction status](docs/reproduction.md)
 
-The Electronic Voting Machine (EVM) developed in this project offers the following features:
+<table>
+<tr><td width="50%"><img src="evm_image1.jpg" width="350" alt="Voting prototype with candidate buttons, fingerprint scanner and LCD confirmation"></td><td width="50%"><img src="evm_image2.jpg" width="350" alt="LCD displaying the recorded count for candidate four"></td></tr>
+<tr><td>Vote confirmation on the assembled prototype</td><td>Candidate count on the local display</td></tr>
+</table>
 
-- **Biometric Authentication**: Utilizes biometric data, such as fingerprints or palm prints 🖐️, to verify the identity of voters securely.
+## Overview
 
-- **Facial Recognition**: Employs facial recognition technology 👤 to authenticate voters based on facial features, enhancing the accuracy and reliability of the authentication process.
+The prototype brings sensor input, identity checks and a physical voting interface into one Raspberry Pi application. The voting flow combines a fingerprint check with camera-based face verification before accepting a candidate-button input. An LCD guides the user through the process and displays confirmation.
 
-- **Raspberry Pi Integration**: Leveraging the Raspberry Pi platform 🍇, the EVM provides a cost-effective and accessible solution for electronic voting, making it suitable for deployment in various electoral settings.
+This repository preserves the academic report and photographs of the assembled prototype. The report includes an illustrative Python code appendix and example screens. A complete runnable source tree is not included in this checkout.
 
-## How it Works 🛠️
+## Voting flow
 
-1. **Voter Authentication**: Voters are required to undergo biometric or facial recognition authentication before gaining access to the voting interface.
+1. Start the identity-checking sequence.
+2. Match the fingerprint and perform the camera-based face check.
+3. Check whether the person has already voted.
+4. Accept a candidate-button selection and record the vote.
+5. Show confirmation, with a separate interaction for displaying results.
 
-2. **Ballot Casting**: Authenticated voters can then cast their votes electronically through the user-friendly interface provided by the EVM.
+The report illustrates the repeat-vote check in its results section. Its appendix references external face-recognition code that is absent here, so the full flow cannot be reconstructed from this checkout alone.
 
-3. **Vote Tabulation**: The EVM tabulates the votes securely and generates accurate results, contributing to the integrity of the electoral process.
+## Hardware and software
 
-## Images 📸
+| Part | Role |
+|---|---|
+| Raspberry Pi 4 | Coordinates the prototype and GPIO devices |
+| R307 fingerprint scanner | Fingerprint capture and matching |
+| Raspberry Pi camera | Input for the face-verification flow |
+| L1602 / 16×2 LCD | Prompts, confirmation and results |
+| Five candidate buttons | Physical selection inputs |
+| Speaker/buzzer and wiring | User feedback and connections |
+| Python, GPIO and serial libraries | Application logic and device interfaces |
 
-![EVM Image 1](evm_image1.jpg)
-*Image caption: Illustration of the Electronic Voting Machine (EVM) interface.*
+The code appendix uses JSON for vote counts and references a separate `Face_Recog` module. See the [technical notes](docs/technical-notes.md) for dependencies and missing pieces.
 
-![EVM Image 1](evm_image2.jpg)
-*Image caption: Illustration of the Electronic Voting Machine (EVM) interface.*
+## Prototype gallery
 
-![EVM Image 2](evm_image3.jpg)
-*Image caption: Biometric and facial recognition authentication process.*
+| Fingerprint prompt | Tamper-alert screen |
+|---|---|
+| ![LCD asking the user to place a finger on the scanner](evm_image3.jpg) | ![LCD displaying the tamper-alert message](photo_2024-04-01_02-46-06.jpg) |
 
-![EVM Image 2](evm_image4.jpg)
-*Image caption: Side View of the machine.*
+| Enclosure and side profile |
+|---|
+| ![Existing photograph showing the voting-machine enclosure from the side](evm_image4.jpg) |
 
-## Getting Started 🚀
+These photographs show the constructed enclosure, LCD, buttons and fingerprint scanner. The tamper-alert photograph establishes a displayed alert; it is not proof that stored votes are tamper-proof or encrypted.
 
-To set up and deploy the Electronic Voting Machine (EVM) project, follow these steps:
+## Engineering work shown
 
-1. Obtain the necessary hardware components, including Raspberry Pi and compatible biometric/facial recognition sensors.
+- Coordinating physical inputs, a serial sensor and an LCD through Python on Raspberry Pi.
+- Connecting identity-checking steps to a device interaction sequence.
+- Recording selections and displaying local results in an academic prototype.
+- Documenting hardware work with a report, code excerpt and photographs.
 
-2. Clone this repository to your Raspberry Pi or development machine.
+## Read the evidence
 
-3. Install the required dependencies and libraries specified in the project documentation.
+The [original report](EVM%20Report.pdf), dated **2 May 2023**, contains design context, flow diagrams, result screens, equipment and the code appendix. It also discusses wider online-voting ideas; these should be distinguished from the physical prototype preserved here.
 
-4. Configure the biometric and facial recognition modules according to the setup instructions provided.
-
-5. Run the EVM software and follow the on-screen instructions for voter authentication and ballot casting.
-
-6. Monitor and analyze the voting process, ensuring the security and integrity of the electoral system.
-
-## Contributions 🤝
-
-Contributions to enhance and expand the functionality of the Electronic Voting Machine (EVM) project are welcome! Feel free to submit pull requests with new features, improvements, or bug fixes.
+This is an academic demonstration, not a certified election system. No independent security evaluation or biometric accuracy benchmark is provided. The [reproduction notes](docs/reproduction.md) explain what is needed to run and evaluate it again.
 
 
-## Acknowledgments 🙏
-
-- The development of this project was inspired by the need for innovative solutions to improve the electoral process and promote democratic participation.
-
-Secure, efficient, and inclusive voting with the Electronic Voting Machine (EVM)! 🗳️

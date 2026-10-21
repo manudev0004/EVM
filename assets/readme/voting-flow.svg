@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="1190" viewBox="0 0 840 1190" role="img" aria-labelledby="title description">
+  <title id="title">Voting interaction: verify, check, select and confirm</title>
+  <desc id="description">Report-described flow: verify fingerprint and camera input. A failed identity match or a prior vote stops recording. Otherwise accept a candidate selection, record it and confirm on the LCD. A separate results action displays stored candidate counts.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#bd9bff"/></marker>
+  </defs>
+  <rect width="840" height="1190" rx="20" fill="#11151c"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+    <text x="48" y="63" font-size="42" font-weight="700" fill="#f6f8fc">Voting interaction</text>
+    <text x="48" y="104" font-size="25" fill="#b8c3d2">Report-described sequence</text>
+    <g text-anchor="middle">
+      <rect x="56" y="144" width="432" height="104" rx="12" fill="#202a37"/>
+      <text x="272" y="188" font-size="36" font-weight="650" fill="#f6f8fc">Verify identity</text>
+      <text x="272" y="226" font-size="27" fill="#cbd5e1">Fingerprint + camera</text>
+      <path d="M272 276 488 336 272 396 56 336Z" fill="#202a37" stroke="#bd9bff" stroke-width="2"/>
+      <text x="272" y="328" font-size="32" font-weight="600" fill="#f6f8fc">Identity</text>
+      <text x="272" y="367" font-size="32" font-weight="600" fill="#f6f8fc">matches?</text>
+      <path d="M272 440 488 500 272 560 56 500Z" fill="#202a37" stroke="#bd9bff" stroke-width="2"/>
+      <text x="272" y="492" font-size="32" font-weight="600" fill="#f6f8fc">Already</text>
+      <text x="272" y="531" font-size="32" font-weight="600" fill="#f6f8fc">voted?</text>
+      <rect x="568" y="321" width="224" height="164" rx="12" fill="#382334" stroke="#e59bbb" stroke-width="2"/>
+      <text x="680" y="382" font-size="30" font-weight="650" fill="#f6f8fc">Do not</text>
+      <text x="680" y="424" font-size="30" font-weight="650" fill="#f6f8fc">record vote</text>
+      <rect x="56" y="608" width="432" height="88" rx="12" fill="#202a37"/>
+      <text x="272" y="662" font-size="34" font-weight="600" fill="#f6f8fc">Select candidate</text>
+      <rect x="56" y="740" width="432" height="88" rx="12" fill="#202a37"/>
+      <text x="272" y="794" font-size="34" font-weight="600" fill="#f6f8fc">Record vote</text>
+      <rect x="56" y="872" width="432" height="88" rx="12" fill="#bd9bff"/>
+      <text x="272" y="926" font-size="34" font-weight="650" fill="#11151c">LCD confirmation</text>
+    </g>
+    <g fill="none" stroke="#bd9bff" stroke-width="3" marker-end="url(#arrow)">
+      <path d="M272 248v26"/>
+      <path d="M272 396v42"/>
+      <path d="M488 336h78"/>
+      <path d="M488 500h40V448h38"/>
+      <path d="M272 560v46"/>
+      <path d="M272 696v42"/>
+      <path d="M272 828v42"/>
+    </g>
+    <g font-size="25" font-weight="650" fill="#cbd5e1">
+      <text x="291" y="427">YES</text>
+      <text x="508" y="319">NO</text>
+      <text x="497" y="538">YES</text>
+      <text x="291" y="593">NO</text>
+    </g>
+    <path d="M48 1000h744" stroke="#354251" stroke-width="2"/>
+    <text x="56" y="1051" font-size="34" font-weight="650" fill="#f6f8fc">Separate results action</text>
+    <text x="56" y="1102" font-size="29" fill="#cbd5e1">Read stored candidate counts</text>
+    <text x="56" y="1145" font-size="29" fill="#cbd5e1">and show them on the LCD.</text>
+  </g>
+</svg>

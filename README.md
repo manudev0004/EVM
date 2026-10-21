@@ -2,7 +2,9 @@
 
 A physical voting-machine prototype combining fingerprint verification, a camera-based identity check, button inputs and a local results display.
 
-[Project report](EVM%20Report.pdf) · [Technical notes](docs/technical-notes.md) · [Reproduction status](docs/reproduction.md)
+![Technology: Raspberry Pi and Python](https://skillicons.dev/icons?i=raspberrypi,python&theme=light)
+
+[Project report PDF](EVM%20Report.pdf)
 
 <table>
 <tr><td width="50%"><img src="evm_image1.jpg" width="350" alt="Voting prototype with candidate buttons, fingerprint scanner and LCD confirmation"></td><td width="50%"><img src="evm_image2.jpg" width="350" alt="LCD displaying the recorded count for candidate four"></td></tr>
@@ -37,7 +39,7 @@ The report illustrates the repeat-vote check in its results section. Its appendi
 | Speaker/buzzer and wiring | User feedback and connections |
 | Python, GPIO and serial libraries | Application logic and device interfaces |
 
-The code appendix uses JSON for vote counts and references a separate `Face_Recog` module. See the [technical notes](docs/technical-notes.md) for dependencies and missing pieces.
+The code appendix uses JSON for vote counts and references a separate `Face_Recog` module. The appendix references a separate face-recognition module that is not included.
 
 ## Prototype gallery
 
@@ -62,6 +64,6 @@ These photographs show the constructed enclosure, LCD, buttons and fingerprint s
 
 The [original report](EVM%20Report.pdf), dated **2 May 2023**, contains design context, flow diagrams, result screens, equipment and the code appendix. It also discusses wider online-voting ideas; these should be distinguished from the physical prototype preserved here.
 
-This is an academic demonstration, not a certified election system. No independent security evaluation or biometric accuracy benchmark is provided. The [reproduction notes](docs/reproduction.md) explain what is needed to run and evaluate it again.
+This is an academic demonstration, not a certified election system. No independent security evaluation or biometric accuracy benchmark is provided.
 
 
